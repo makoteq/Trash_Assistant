@@ -1,23 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import App from "./components/App";
+import Ai from "./components/Ai";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { videoStreamCtx } from "./constants";
 
 const main = async () => {
     console.log("Requesting camera access...");
-    // const videoStream =
-    //     (await window.navigator.mediaDevices?.getUserMedia({ video: { facingMode: "environment" } }).catch((e) => {
-    //         if (e instanceof DOMException) {
-    //             console.error("Camera permission denied");
-    //         }
-    //         return null;
-    //     })) ?? null;
+    const videoStream =
+        (await window.navigator.mediaDevices?.getUserMedia({ video: { facingMode: "environment" } }).catch((e) => {
+            if (e instanceof DOMException) {
+                console.error("Camera permission denied");
+            }
+            return null;
+        })) ?? null;
     ReactDOM.render(
         <React.StrictMode>
-            <videoStreamCtx.Provider value={null}>
-                <App />
+            <videoStreamCtx.Provider value={videoStream}>
+                <Ai />
             </videoStreamCtx.Provider>
         </React.StrictMode>,
         document.querySelector("#app")
