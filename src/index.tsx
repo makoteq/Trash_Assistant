@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import App from "./components/App";
+import Ai from "./components/Ai";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { videoStreamCtx } from "./constants";
 
@@ -17,7 +17,7 @@ const main = async () => {
     ReactDOM.render(
         <React.StrictMode>
             <videoStreamCtx.Provider value={videoStream}>
-                <App />
+                <Ai />
             </videoStreamCtx.Provider>
         </React.StrictMode>,
         document.querySelector("#app")
