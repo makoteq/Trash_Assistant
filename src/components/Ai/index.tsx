@@ -5,7 +5,7 @@ function Ai() {
     const [isModelLoading, setIsModelLoading] = useState(false);
     const [model, setModel] = useState<mobilenet.MobileNet>();
     const [imageURL, setImageURL] = useState<string>();
-    const [results, setResults] = useState<any>([]);
+    const [results, setResults] = useState<{ className: string; probability: number }[]>();
     const [history, setHistory] = useState<any[]>([]);
 
     const imageRef = useRef<HTMLImageElement>();
@@ -81,18 +81,19 @@ function Ai() {
                     <div className="imageHolder">
                         {imageURL && <img src={imageURL} alt="Upload Preview" crossOrigin="anonymous" ref={imageRef as LegacyRef<HTMLImageElement> | undefined} />}
                     </div>
-                    {results.length > 0 && (
+                    {(results ? results.length : []) > 0 && (
                         <div className="resultsHolder">
-                            {results.map((result: { className: string; probability: number }, index: number) => {
-                                return (
-                                    <div className="result" key={result.className}>
-                                        <span className="name">{result.className}</span>
-                                        <span className="confidence">
-                                            Confidence level: {(result.probability * 100).toFixed(2)}% {index === 0 && <span className="bestGuess">Best Guess</span>}
-                                        </span>
-                                    </div>
-                                );
-                            })}
+                            {results &&
+                                results.map((result: { className: string; probability: number }, index: number) => {
+                                    return (
+                                        <div className="result" key={result.className}>
+                                            <span className="name">{result.className}</span>
+                                            <span className="confidence">
+                                                Confidence level: {(result.probability * 100).toFixed(2)}% {index === 0 && <span className="bestGuess">Best Guess</span>}
+                                            </span>
+                                        </div>
+                                    );
+                                })}
                         </div>
                     )}
                 </div>
