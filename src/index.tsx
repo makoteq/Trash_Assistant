@@ -7,16 +7,16 @@ import { videoStreamCtx } from "./constants";
 
 const main = async () => {
     console.log("Requesting camera access...");
-    const videoStream =
-        (await window.navigator.mediaDevices?.getUserMedia({ video: { facingMode: "environment" } }).catch((e) => {
-            if (e instanceof DOMException) {
-                console.error("Camera permission denied");
-            }
-            return null;
-        })) ?? null;
+    // const videoStream =
+    //     (await window.navigator.mediaDevices?.getUserMedia({ video: { facingMode: "environment" } }).catch((e) => {
+    //         if (e instanceof DOMException) {
+    //             console.error("Camera permission denied");
+    //         }
+    //         return null;
+    //     })) ?? null;
     ReactDOM.render(
         <React.StrictMode>
-            <videoStreamCtx.Provider value={videoStream}>
+            <videoStreamCtx.Provider value={null}>
                 <App />
             </videoStreamCtx.Provider>
         </React.StrictMode>,
