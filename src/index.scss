@@ -2,6 +2,8 @@
 
 $background: #222222;
 $text: hsl(140, 100%, 60%);
+$transitionDuration: 0.3s;
+$borderRadius: 5px;
 
 * {
     margin: 0;
@@ -22,4 +24,18 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: $borderRadius;
+    background-color: $background;
+    color: $text;
+    transition: all $transitionDuration ease;
+    &:hover {
+        background-color: $text;
+        color: black;
+    }
 }

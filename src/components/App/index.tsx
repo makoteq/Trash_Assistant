@@ -3,6 +3,7 @@ import style from "./index.module.scss";
 import { videoStreamCtx } from "../../constants";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
+import { Overlay } from "../Overlay";
 
 function App() {
     const videoPlayer: MutableRefObject<HTMLVideoElement | null> = useRef(null);
@@ -15,7 +16,7 @@ function App() {
     return (
         <div className={style.appContainer}>
             {videoStream ? (
-                <video autoPlay={true} muted={true} ref={videoPlayer} className={style.videoFeed}></video>
+                [<Overlay key="overlay" />, <video style={{ zIndex: 0 }} key="camera" autoPlay={true} muted={true} ref={videoPlayer} className={style.videoFeed}></video>]
             ) : (
                 <Box verticalAlignment="center" horizontalAlignment="center" gap={3} direction="column">
                     <Icon type={"x-circle"} color={"#ff0000"} size={120}></Icon>
