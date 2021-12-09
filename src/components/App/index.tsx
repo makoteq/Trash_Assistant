@@ -16,7 +16,10 @@ export const App = () => {
     return (
         <div className={style.appContainer}>
             {videoStream ? (
-                [<Overlay key="overlay" />, <video style={{ zIndex: 0 }} key="camera" autoPlay={true} muted={true} ref={videoPlayer} className={style.videoFeed}></video>]
+                [
+                    <Overlay key="overlay" />,
+                    <video id="video-feed" style={{ zIndex: 0 }} key="camera" autoPlay={true} muted={true} ref={videoPlayer} className={style.videoFeed}></video>,
+                ]
             ) : (
                 <Box verticalAlignment="center" horizontalAlignment="center" gap={3} direction="column">
                     <Icon type={"x-circle"} color={"#ff0000"} size={120}></Icon>
