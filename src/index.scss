@@ -36,6 +36,7 @@ button {
     transition: all $transitionDuration ease;
     border: 1.5px solid lighten($background, 10%);
     box-shadow: 0 0 0.5px black;
+    cursor: pointer;
     &:hover {
         background-color: $text;
         color: black;
