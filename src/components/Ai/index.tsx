@@ -82,19 +82,6 @@ function Ai() {
                     <div className="imageHolder">
                         {imageURL && <img src={imageURL} alt="Upload Preview" crossOrigin="anonymous" ref={imageRef as LegacyRef<HTMLImageElement> | undefined} />}
                     </div>
-                    {(results ? results.length : []) > 0 && (
-                        <div className="resultsHolder">
-                            {results &&
-                                results.map((result: { className: string; probability: number }, index: number) => {
-                                    return (
-                                        <div className="result" key={result.className}>
-                                            <span className="name">{result.className}</span>
-                                           
-                                        </div>
-                                    );
-                                })}
-                        </div>
-                    )}
                 </div>
                 {imageURL && (
                     <button className="button" onClick={identify}>
@@ -102,20 +89,7 @@ function Ai() {
                     </button>
                 )}
             </div>
-            {history.length > 0 && (
-                <div className="recentPredictions">
-                    <h2>Recent Images</h2>
-                    <div className="recentImages">
-                        {history.map((image, index) => {
-                            return (
-                                <div className="recentPrediction" key={`${image}${index}`}>
-                                    <img src={image} alt="Recent Prediction" onClick={() => setImageURL(image)} />
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            )}
+            
         </div>
     );
 }
