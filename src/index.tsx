@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import { App } from "./components/App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import { videoStreamCtx } from "./constants";
+import { modelCtx, videoStreamCtx } from "./constants";
+import { load as loadModel } from "@tensorflow-models/mobilenet";
 
 const main = async () => {
     console.log("Requesting camera access...");
@@ -14,19 +15,19 @@ const main = async () => {
             }
             return null;
         })) ?? null;
+    console.log("Loading AI model...");
+    const model = await loadModel();
     ReactDOM.render(
         <React.StrictMode>
-            <videoStreamCtx.Provider value={videoStream}>
-                <App />
-            </videoStreamCtx.Provider>
+            <modelCtx.Provider value={model}>
+                <videoStreamCtx.Provider value={videoStream}>
+                    <App />
+                </videoStreamCtx.Provider>
+            </modelCtx.Provider>
         </React.StrictMode>,
         document.querySelector("#app")
     );
 };
 
 main();
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.register();

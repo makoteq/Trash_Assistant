@@ -1,10 +1,13 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { spawnDialog } from "../../AlertDialog/spawnDialog";
+import { modelCtx } from "../../constants";
 import { getVideoFrame } from "../../utils/getVideoFrame";
 import { Icon } from "../Icon";
 import style from "./index.module.scss";
 
 export const Overlay: FC = () => {
+    const model = useContext(modelCtx);
+
     return (
         <div className={style.container}>
             <button
@@ -19,11 +22,21 @@ export const Overlay: FC = () => {
             </button>
             <button
                 className={style.captureBtn}
-                onClick={() =>
+                onClick={async () => {
+                    const img = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
+                    const r = await model?.classify(img);
+                    console.log(r);
                     spawnDialog((c) => {
-                        return [<img width={500} src={getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement)} />, <button onClick={c}>close</button>];
-                    })
-                }
+                        return (
+                            <>
+                                <img alt="result" width={300} src={img.src} />
+                                <p>{r?.[0].className}</p>
+                                <p>{r?.[0].probability}</p>
+                                <button onClick={c}>close</button>
+                            </>
+                        );
+                    });
+                }}
             >
                 <Icon type="camera-fill" size={40} />
             </button>

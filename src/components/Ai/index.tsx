@@ -36,11 +36,10 @@ function Ai() {
     const identify = async () => {
         if (textInputRef.current && imageRef.current) {
             textInputRef.current.value = "";
-            const results:any = await model?.classify(imageRef.current);
+            const results: any = await model?.classify(imageRef.current);
             setResults(results);
-            console.log(results[0])
+            console.log(results[0]);
         }
-    
     };
 
     const handleOnChange = (e: any) => {
@@ -89,7 +88,6 @@ function Ai() {
                     </button>
                 )}
             </div>
-            
         </div>
     );
 }
