@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, LegacyRef } from "react";
 import * as mobilenet from "@tensorflow-models/mobilenet";
-
 function Ai() {
     const [isModelLoading, setIsModelLoading] = useState(false);
     const [model, setModel] = useState<mobilenet.MobileNet>();
