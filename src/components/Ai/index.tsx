@@ -36,9 +36,11 @@ function Ai() {
     const identify = async () => {
         if (textInputRef.current && imageRef.current) {
             textInputRef.current.value = "";
-            const results = await model?.classify(imageRef.current);
+            const results:any = await model?.classify(imageRef.current);
             setResults(results);
+            console.log(results[0])
         }
+    
     };
 
     const handleOnChange = (e: any) => {
@@ -87,9 +89,7 @@ function Ai() {
                                     return (
                                         <div className="result" key={result.className}>
                                             <span className="name">{result.className}</span>
-                                            <span className="confidence">
-                                                Confidence level: {(result.probability * 100).toFixed(2)}% {index === 0 && <span className="bestGuess">Best Guess</span>}
-                                            </span>
+                                           
                                         </div>
                                     );
                                 })}
