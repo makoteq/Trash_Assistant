@@ -29,7 +29,7 @@ export const Overlay: FC = () => {
                     spawnDialog((c) => {
                         return (
                             <>
-                                <img width={500} src={can.toDataURL("image/png")} />
+                                <img width={500} alt={r?.[0].className} src={can.toDataURL("image/png")} />
                                 <p>{r?.[0].className}</p>
                                 <p>{r?.[0].probability}</p>
                                 <button onClick={c}>close</button>
