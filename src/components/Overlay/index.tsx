@@ -6,7 +6,6 @@ import style from "./index.module.scss";
 export const Overlay: FC = () => {
     return (
         <div className={style.container}>
-            <div className={style.tip}>Zeskanuj obiekt za pomocą aparatu...</div>
             <button
                 className={style.aboutBtn}
                 onClick={() =>
@@ -15,7 +14,10 @@ export const Overlay: FC = () => {
                     })
                 }
             >
-                <Icon type="info-circle-fill" /> Informacje
+                <Icon type="info-circle-fill" size={30} />
+            </button>
+            <button className={style.captureBtn}>
+                <Icon type="camera-fill" size={40} />
             </button>
         </div>
     );

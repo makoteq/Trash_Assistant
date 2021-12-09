@@ -15,26 +15,16 @@ $padding: 15px;
 }
 
 .aboutBtn {
-    bottom: $padding;
+    top: $padding;
     right: $padding;
     font-size: 15px;
 }
 
-.tip {
-    top: $padding;
-    left: $padding;
-    background-color: $background;
-    border-radius: $borderRadius;
-    padding: 10px;
-    animation: glowing 4s linear infinite;
-}
-
-@keyframes glowing {
-    0%,
-    100% {
-        color: $text;
-    }
-    50% {
-        color: darken($text, 30%);
-    }
+.captureBtn {
+    bottom: $padding;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: calc($borderRadius * 2);
+    width: 70px;
+    height: 70px;
 }
