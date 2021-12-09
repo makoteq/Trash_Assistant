@@ -23,13 +23,13 @@ export const Overlay: FC = () => {
             <button
                 className={style.captureBtn}
                 onClick={async () => {
-                    const img = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
-                    const r = await model?.classify(img);
+                    const can = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
+                    const r = await model?.classify(can);
                     console.log(r);
                     spawnDialog((c) => {
                         return (
                             <>
-                                <img alt="result" width={300} src={img.src} />
+                                <img width={500} src={can.toDataURL("image/png")} />
                                 <p>{r?.[0].className}</p>
                                 <p>{r?.[0].probability}</p>
                                 <button onClick={c}>close</button>
