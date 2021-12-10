@@ -40,6 +40,29 @@ button {
     &:hover {
         background-color: $text;
         color: black;
-        border-color: darken($text, 10%);
+        border-color: darken($text, 30%);
     }
+}
+
+.btn-inverse {
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: $borderRadius;
+    background-color: $text;
+    color: black;
+    transition: all $transitionDuration ease;
+    border: 1.5px solid darken($text, 30%);
+    box-shadow: 0 0 0.5px black;
+    cursor: pointer;
+    &:hover {
+        background-color: $background;
+        color: $text;
+        border-color: lighten($background, 10%);
+    }
+}
+
+::selection {
+    background-color: darken($text, 20%);
+    color: black;
 }

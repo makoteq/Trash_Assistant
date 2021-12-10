@@ -1,4 +1,4 @@
-@import "../index.scss";
+@import "../../index.scss";
 
 .container {
     width: 100%;
@@ -18,4 +18,6 @@
     padding: 10px;
     clip-path: inset(0 0 0 0);
     position: relative;
+    border: 1.5px solid lighten($background, 10%);
+    box-shadow: 0 0 0.5px black;
 }

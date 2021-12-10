@@ -1,0 +1,45 @@
+@import "../../index.scss";
+
+.container {
+    text-decoration: none;
+    animation: in-anim 0.3s ease-out both;
+    transform: translateY(15px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    border: solid 1px transparent;
+    display: block;
+    &:hover {
+        background-color: rgba(200, 200, 200, 0.2);
+        border: solid 1px lighten(rgba(200, 200, 200, 0.2), 10%);
+    }
+}
+
+.img {
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.2s ease-out;
+    width: 10vh;
+    height: 10vh;
+    .container:hover & {
+        transform: scale(1.1);
+    }
+}
+
+.title {
+    font-size: 20px;
+    color: $text;
+}
+
+@keyframes in-anim {
+    from {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

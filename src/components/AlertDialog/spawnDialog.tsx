@@ -5,7 +5,7 @@ import { AlertDialog } from "./index";
 export const spawnDialog = async (elements: (close: (data: any) => void) => ReactNode, windowStyles?: CSSProperties) => {
     const container = document.createElement("div");
     const backgroundColor = "rgba(0,0,0,0.75)";
-    const animationDuration = 300;
+    const animationDuration = 250;
 
     (container.style as any) = "display: block; overflow: hidden; width: 100vw; height: 100vh; z-index: 20; position: fixed; top: 0; left: 0";
 
