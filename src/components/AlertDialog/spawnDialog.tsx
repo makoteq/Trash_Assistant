@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode } from "react";
 import ReactDOM from "react-dom";
 import { AlertDialog } from "./index";
 
-export const spawnDialog = async (elements: (close: (data: any) => void) => ReactNode, windowStyles?: CSSProperties) => {
+export const spawnDialog = async (elements: (close: (data?: any) => void) => ReactNode, windowStyles?: CSSProperties) => {
     const container = document.createElement("div");
     const backgroundColor = "rgba(0,0,0,0.75)";
     const animationDuration = 250;
