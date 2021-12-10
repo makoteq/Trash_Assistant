@@ -17,25 +17,27 @@ export const Results: FC<{}> = (_) => {
 
     useEffect(() => {
         const can = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
-        let type:string = "";
         model?.classify(can).then((r) => {
             console.log(getBestGuess(r?.[0].className));
             database.every((element) => {
                 console.log(element.AIname);
                 if (element.AIname === getBestGuess(r?.[0].className)) {
                     console.log(element.type);
-                    type=element.type;
-                    console.log(type)
+                    uel(
+                      <>
+                        <p className={element.type}>{element.type}</p>
+                      </>
+                  );
                     return false;
                 }
+                uel(
+                  <>
+                    <p >nie znaleziono</p>
+                  </>
+              );
                 return true;
-                
             });
-            uel(
-                <>
-                  <p className={type}>{type}</p>
-                </>
-            );
+       
         });
     }, [model]);
 
