@@ -22,6 +22,14 @@
                 justify-content: center;
                 background-color: #222222;
             }
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
         </style>
     </head>
     <body>
@@ -29,6 +37,7 @@
         <div id="app">
             <div id="loading-cont" style="text-align: center; display: flex; flex-direction: column; column-gap: 10px; justify-content: center; align-items: center">
                 <img src="%PUBLIC_URL%/logo192.png" alt="Trash Recognizer logo" />
+                <img src="%PUBLIC_URL%/loadingCircle.png" width="45" height="45" alt="loading-circle" style="animation: spin 0.5s linear infinite" />
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
