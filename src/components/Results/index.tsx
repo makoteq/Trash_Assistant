@@ -17,21 +17,23 @@ export const Results: FC<{}> = (_) => {
 
     useEffect(() => {
         const can = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
+        let type:string = "";
         model?.classify(can).then((r) => {
             console.log(getBestGuess(r?.[0].className));
             database.every((element) => {
                 console.log(element.AIname);
                 if (element.AIname === getBestGuess(r?.[0].className)) {
                     console.log(element.type);
+                    type=element.type;
+                    console.log(type)
                     return false;
                 }
                 return true;
+                
             });
             uel(
                 <>
-                    <img className={style.img} alt={r?.[0].className} src={can.toDataURL("image/png")} />
-                    <p>{r?.[0].className}</p>
-                    <p>{r?.[0].probability}</p>
+                  <p className={type}>{type}</p>
                 </>
             );
         });
