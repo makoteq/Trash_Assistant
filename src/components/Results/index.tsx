@@ -12,25 +12,6 @@ export const Results: FC<{}> = (_) => {
             <h1 className={style.loadingLbl}>Trwa analizowanie zdjęcia...</h1>
         </Box>
     );
-<<<<<<< HEAD
-    model?.classify(can).then((r) => {
-      console.log(getBestGuess(r?.[0].className));
-      database.every((element) => {
-          console.log(element.AIname)
-        if (element.AIname == getBestGuess(r?.[0].className)) {
-          console.log(element.type);
-          return false;
-        }
-        return true;
-      });
-      uel(
-        <>
-          <p></p>
-        </>
-      );
-    });
-  }, [model]);
-=======
     const model = useContext(modelCtx);
     const getBestGuess = (g: string) => g.split(",")[0];
 
@@ -55,7 +36,6 @@ export const Results: FC<{}> = (_) => {
             );
         });
     }, [model]);
->>>>>>> 5775834eeee313dbb026e5adefac33950ef73c81
 
     return el;
 };
