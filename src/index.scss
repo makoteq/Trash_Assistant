@@ -2,7 +2,7 @@
 
 $background: #222222;
 $text: hsl(140, 100%, 60%);
-$transitionDuration: 0.3s;
+$transitionDuration: 0.2s;
 $borderRadius: 5px;
 
 * {
@@ -31,16 +31,14 @@ button {
     padding: 10px;
     box-shadow: none;
     border-radius: $borderRadius;
-    background-color: $background;
     color: $text;
+    background-color: $background;
     transition: all $transitionDuration ease;
     border: 1.5px solid lighten($background, 10%);
-    box-shadow: 0 0 0.5px black;
     cursor: pointer;
     &:hover {
-        background-color: $text;
-        color: black;
-        border-color: darken($text, 30%);
+        background-color: lighten($background, 10%);
+        border-color: lighten($background, 20%);
     }
 }
 
@@ -52,13 +50,11 @@ button {
     background-color: $text;
     color: black;
     transition: all $transitionDuration ease;
-    border: 1.5px solid darken($text, 30%);
-    box-shadow: 0 0 0.5px black;
+    border: 1.5px solid lighten($text, 10%);
     cursor: pointer;
     &:hover {
-        background-color: $background;
-        color: $text;
-        border-color: lighten($background, 10%);
+        background-color: lighten($text, 10%);
+        border-color: lighten($text, 20%);
     }
 }
 
