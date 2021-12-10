@@ -54,13 +54,7 @@ export const Results: FC<{}> = (_) => {
       });
       uel(
         <>
-          <img
-            className={style.img}
-            alt={r?.[0].className}
-            src={can.toDataURL("image/png")}
-          />
-          <p>{r?.[0].className}</p>
-          <p>{r?.[0].probability}</p>
+          <p></p>
         </>
       );
     });
