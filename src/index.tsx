@@ -9,10 +9,10 @@ import { load as loadModel } from "@tensorflow-models/mobilenet";
 const main = async () => {
     const appContainer = document.querySelector("#app");
     const infoLabel = document.createElement("p");
-    infoLabel.style.color = "white";
     infoLabel.style.fontSize = "25px";
     infoLabel.style.fontFamily = "Arial, sans-serif";
     infoLabel.style.fontWeight = "100";
+    infoLabel.style.margin = "5px";
     infoLabel.innerHTML = "Oczekiwanie na uprawnienia dostępu do kamery...";
     appContainer?.children[0].appendChild(infoLabel);
     const videoStream =
