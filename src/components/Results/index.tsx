@@ -20,7 +20,7 @@ export const Results: FC<{}> = (_) => {
             console.log(r);
             uel(
                 <>
-                    <img height={500} alt={r?.[0].className} src={can.toDataURL("image/png")} />
+                    <img className={style.img} alt={r?.[0].className} src={can.toDataURL("image/png")} />
                     <p>{r?.[0].className}</p>
                     <p>{r?.[0].probability}</p>
                 </>

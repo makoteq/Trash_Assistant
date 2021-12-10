@@ -5,6 +5,11 @@
     animation: spin 1s linear infinite;
 }
 
+.img {
+    max-width: 60vw;
+    max-height: 60vh;
+}
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
