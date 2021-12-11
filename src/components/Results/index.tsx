@@ -25,6 +25,12 @@ export const Results: FC<{}> = (_) => {
   );
   const model = useContext(modelCtx);
   const getBestGuess = (g: string) => g.split(",")[0];
+  const getDescription = (arg:string) => {
+    switch(arg){
+      case "_0":
+        return "Tworzywa Sztuczne i Metale";
+    }
+  }
   const container = {
     padding: "20px",
     height: "60vh",
@@ -48,7 +54,7 @@ export const Results: FC<{}> = (_) => {
           uel(
             <>
               <div style={container} className={element.type}>
-                <p>{element.type}</p>
+                <p>{getDescription(element.type)}</p>
               </div>
             </>
           );
