@@ -1,4 +1,5 @@
-![logo](https://image.freepik.com/free-photo/recycle-sign-green-garbage-trash-bin-character-mascot-with-dslr-video-camera-gimbal-stabilization-tripod-system-isolated-background-3d-rendering_476612-13981.jpg)
+![logo](![Trash (1) 1](https://user-images.githubusercontent.com/60068941/145684403-9f63086f-db8f-46c1-aa17-214ac0eda08d.png)
+)
 
 > Trash Assistant - _A friend of the environment_.
 
@@ -8,8 +9,6 @@
 -   [Technologies Used](#technologies-used)
 -   [Screenshots](#screenshots)
 -   [Usage](#usage)
--   [Project Status](#project-status)
--   [Performance](#performance)
 
 ## General Information
 
@@ -30,7 +29,3 @@
 ## Usage
 
 Simply visit our internet website ...?
-
-## Project Status:
-
-_in progress_
