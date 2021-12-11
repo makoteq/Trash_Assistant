@@ -1,0 +1,14 @@
+@import "../../index.scss";
+
+.cameraSelector {
+    padding: 10px;
+    background-color: transparent;
+    color: $text;
+    border-radius: 5px;
+    border: 1px $text solid;
+    font-size: 15px;
+}
+
+.refreshBtn {
+    line-height: 1;
+}

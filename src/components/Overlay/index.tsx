@@ -1,16 +1,30 @@
 import { FC, useContext } from "react";
 import { spawnDialog } from "../AlertDialog/spawnDialog";
-import { accentColor, database, modelCtx } from "../../constants";
+import { accentColor, database, modelCtx, videoDataCtx } from "../../constants";
 import { About } from "../About";
 import { Icon } from "../Icon";
 import { Results } from "../Results";
 import style from "./index.module.scss";
 import { getVideoFrame } from "../../utils/getVideoFrame";
+import { Settings } from "../Settings";
 
 export const Overlay: FC = () => {
     const model = useContext(modelCtx);
+    const videoData = useContext(videoDataCtx);
     return (
         <div className={style.container}>
+            <button
+                className={style.settingsBtn}
+                onClick={() =>
+                    spawnDialog((c) => (
+                        <videoDataCtx.Provider value={videoData}>
+                            <Settings cfn={c} />
+                        </videoDataCtx.Provider>
+                    ))
+                }
+            >
+                <Icon type="gear-fill" size={30} />
+            </button>
             <button className={style.aboutBtn} onClick={() => spawnDialog((c) => <About cfn={c} />)}>
                 <Icon type="info-circle-fill" size={30} />
             </button>

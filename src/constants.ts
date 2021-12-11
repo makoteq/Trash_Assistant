@@ -2,7 +2,7 @@ import { MobileNet } from "@tensorflow-models/mobilenet";
 import { Context, createContext } from "react";
 
 // Global application contexts
-export const videoStreamCtx = createContext(null) as Context<MediaStream | null>;
+export const videoDataCtx = createContext(null) as Context<VideoData | null>;
 export const modelCtx = createContext(null) as Context<MobileNet | null>;
 
 //0-papier,1-metale i tworzywa sztuczne,2-szkło,3-bio,4-resztkowe
@@ -26,4 +26,10 @@ export interface DatabaseRecord {
     type: string;
     color: string;
     colorName: string;
+}
+export interface VideoData {
+    devices: MediaDeviceInfo[];
+    device: MediaDeviceInfo;
+    stream: MediaStream;
+    setter: Function;
 }
