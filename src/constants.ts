@@ -6,14 +6,23 @@ export const videoStreamCtx = createContext(null) as Context<MediaStream | null>
 export const modelCtx = createContext(null) as Context<MobileNet | null>;
 
 //0-papier,1-metale i tworzywa sztuczne,2-szkło,3-bio,4-resztkowe
-export const database = [
-    { AIname: "water bottle", type: "_0" },
-    { AIname: "cash machine", type: "_1" },
-    { AIname: "iPod", type: "_2" },
-    { AIname: "cash machine", type: "_3" },
-    { AIname: "cash machine", type: "_4" },
-    { AIname: "cash machine", type: "_5" },
+export const database: DatabaseRecord[] = [
+    { AIname: ["paper"], type: "Papier", color: "#383087", colorName: "Niebieski" },
+    { AIname: ["water bottle", "pill bottle"], type: "Tworzywa sztuczne", color: "rgb(255,255,0)", colorName: "Żółty" },
+    { AIname: [], type: "Metale", color: "#E31E25", colorName: "Czerwony" },
+    { AIname: ["iPod", "pop bottle"], type: "Szkło", color: "#009746", colorName: "Zielony" },
+    { AIname: [], type: "Bio", color: "#8F7459", colorName: "Brązowy" },
+    { AIname: [], type: "Zmieszane", color: "#2C2928", colorName: "Czarny" },
 ];
 
 // Global constants
 export const appName = "Trash Assistant";
+export const accentColor = "hsl(140,100%,60%)";
+
+// Global data structures
+export interface DatabaseRecord {
+    AIname: string[];
+    type: string;
+    color: string;
+    colorName: string;
+}

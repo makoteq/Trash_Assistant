@@ -1,10 +1,11 @@
 import { FC, useContext } from "react";
 import { spawnDialog } from "../AlertDialog/spawnDialog";
-import { modelCtx } from "../../constants";
+import { accentColor, database, modelCtx } from "../../constants";
 import { About } from "../About";
 import { Icon } from "../Icon";
 import { Results } from "../Results";
 import style from "./index.module.scss";
+import { getVideoFrame } from "../../utils/getVideoFrame";
 
 export const Overlay: FC = () => {
     const model = useContext(modelCtx);
@@ -16,16 +17,32 @@ export const Overlay: FC = () => {
             <button
                 className={style.captureBtn}
                 onClick={async () => {
-                    spawnDialog((c) => {
-                        return (
-                            <modelCtx.Provider value={model}>
-                                <Results />
-                                <button style={{ width: "100%" }} onClick={c} className="btn-inverse">
-                                    Zamknij
-                                </button>
-                            </modelCtx.Provider>
-                        );
-                    });
+                    const can = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
+                    const modelResult = await model?.classify(can);
+                    const guess = modelResult?.[0].className.split(",")[0] ?? "";
+                    const result = database.find((e) => e.AIname.indexOf(guess) !== -1);
+                    console.log(guess);
+                    spawnDialog(
+                        (c) => {
+                            return (
+                                <>
+                                    <Results type={result} />
+                                    <button style={{ width: "100%", backgroundColor: result?.color ?? accentColor, border: "0px transparent" }} onClick={c} className="btn-inverse">
+                                        Zamknij
+                                    </button>
+                                </>
+                            );
+                        },
+                        {
+                            padding: "20px",
+                            minWidth: "40vw",
+                            maxWidth: "80vw",
+                            borderRadius: "10px",
+                            color: "#000",
+                            fontWeight: 700,
+                            fontSize: "1.8em",
+                        }
+                    );
                 }}
             >
                 <Icon type="camera-fill" size={40} />
