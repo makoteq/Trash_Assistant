@@ -6,3 +6,21 @@
     max-width: 60vw;
     max-height: 60vh;
 }
+.trash,
+.arrow {
+    line-height: 1;
+}
+.arrow {
+    margin-top: 20px;
+}
+.type {
+    font-size: 1.2em;
+}
+.color {
+    font-size: 0.8em;
+}
+.color,
+.type {
+    text-align: center;
+    line-height: 1.2;
+}

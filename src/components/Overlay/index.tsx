@@ -16,16 +16,27 @@ export const Overlay: FC = () => {
             <button
                 className={style.captureBtn}
                 onClick={async () => {
-                    spawnDialog((c) => {
-                        return (
-                            <modelCtx.Provider value={model}>
-                                <Results />
-                                <button style={{ width: "100%" }} onClick={c} className="btn-inverse">
-                                    Zamknij
-                                </button>
-                            </modelCtx.Provider>
-                        );
-                    });
+                    spawnDialog(
+                        (c) => {
+                            return (
+                                <modelCtx.Provider value={model}>
+                                    <Results />
+                                    <button style={{ width: "100%" }} onClick={c} className="btn-inverse">
+                                        Zamknij
+                                    </button>
+                                </modelCtx.Provider>
+                            );
+                        },
+                        {
+                            padding: "20px",
+                            minWidth: "40vw",
+                            maxWidth: "80vw",
+                            borderRadius: "10px",
+                            color: "#000",
+                            fontWeight: 700,
+                            fontSize: "1.8em",
+                        }
+                    );
                 }}
             >
                 <Icon type="camera-fill" size={40} />
