@@ -21,6 +21,7 @@
 -   React
 -   Tenserflow
 -   Sass
+-   PWA
 
 ## Screenshots
 
