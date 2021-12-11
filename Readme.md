@@ -1,5 +1,5 @@
-![logo](![Trash (1) 1](https://user-images.githubusercontent.com/60068941/145684403-9f63086f-db8f-46c1-aa17-214ac0eda08d.png)
-)
+![logo](https://user-images.githubusercontent.com/60068941/145684403-9f63086f-db8f-46c1-aa17-214ac0eda08d.png)
+
 
 > Trash Assistant - _A friend of the environment_.
 
