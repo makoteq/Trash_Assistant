@@ -17,9 +17,10 @@ export const database: DatabaseRecord[] = [
 
 // Global constants
 export const appName = "Trash Assistant";
+export const accentColor = "hsl(140,100%,60%)";
 
 // Global data structures
-interface DatabaseRecord {
+export interface DatabaseRecord {
     AIname: string[];
     type: string;
     color: string;
