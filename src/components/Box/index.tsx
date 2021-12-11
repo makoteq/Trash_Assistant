@@ -3,8 +3,8 @@ import { FC } from "react";
 export const Box: FC<{
     direction?: "row" | "column";
     gap?: number;
-    horizontalAlignment?: "flex-start" | "center" | "flex-end";
-    verticalAlignment?: "flex-start" | "center" | "flex-end";
+    horizontalAlignment?: "flex-start" | "center" | "flex-end" | "space-between" | "space-evenly" | "space-around";
+    verticalAlignment?: "flex-start" | "center" | "flex-end" | "space-between" | "space-evenly" | "space-around";
     className?: string;
 }> = (props) => {
     return (

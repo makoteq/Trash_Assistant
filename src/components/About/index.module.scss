@@ -1,5 +1,10 @@
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column !important;
+        width: 300px;
     }
+}
+
+.buttons {
+    width: 100%;
 }

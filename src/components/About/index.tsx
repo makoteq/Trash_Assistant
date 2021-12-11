@@ -12,9 +12,20 @@ export const About: FC<{ cfn: (d: any) => void }> = (props) => {
                 <CreditTile title="makoteq" imageUrl="https://avatars.githubusercontent.com/u/42750440?v=4" gh="makoteq" delay={100} />
                 <CreditTile title="drgoodcat" imageUrl="https://avatars.githubusercontent.com/u/60068941?v=4" gh="drgoodcat" delay={200} />
             </Box>
-            <button style={{ width: "100%" }} onClick={props.cfn} className="btn-inverse">
-                Zamknij
-            </button>
+            <Box className={style.buttons} gap={5} direction="row" verticalAlignment="center">
+                <button
+                    style={{ flex: 1 }}
+                    onClick={() => {
+                        window.localStorage.setItem("intro", "false");
+                        window.location.reload();
+                    }}
+                >
+                    Pokaż prezentację
+                </button>
+                <button style={{ flex: 1 }} onClick={props.cfn} className="btn-inverse">
+                    Zamknij
+                </button>
+            </Box>
         </Box>
     );
 };

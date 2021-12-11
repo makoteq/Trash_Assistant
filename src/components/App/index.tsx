@@ -4,13 +4,26 @@ import { videoStreamCtx } from "../../constants";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Overlay } from "../Overlay";
+import { spawnDialog } from "../AlertDialog/spawnDialog";
+import { Intro } from "../Intro";
 
 export const App = () => {
     const videoPlayer: MutableRefObject<HTMLVideoElement | null> = useRef(null);
     const videoStream = useContext(videoStreamCtx);
 
     useEffect(() => {
-        if (videoPlayer.current && videoStream) videoPlayer.current.srcObject = videoStream;
+        if (videoPlayer.current && videoStream) {
+            videoPlayer.current.srcObject = videoStream;
+            if (window.localStorage.getItem("intro") !== "true") {
+                setTimeout(
+                    () =>
+                        spawnDialog((c) => {
+                            return <Intro closeFn={c} />;
+                        }),
+                    500
+                );
+            }
+        }
     });
 
     return (
