@@ -12,8 +12,8 @@ const pages = [
         title="Jak to działa?"
         content={
             <p>
-                Masz problem przy zapamiątaniu podstawowych zasad sortowania odpadów? Ta aplikacja pomoże ci sortować twoje śmieci XD. Po prostu naceluj kamerą na śmiecia i
-                naciśnij przycisk z ikoną <Icon type="camera" size={20} /> u dołu ekranu.
+                Masz problem przy zapamiątaniu podstawowych zasad sortowania odpadów? Ta aplikacja ci w tym pomoże. To bardzo proste. Naceluj kamerą na objekt, który zamierzasz
+                wyrzucić i naciśnij przycisk z ikoną <Icon type="camera" size={20} /> u dołu ekranu.
             </p>
         }
     />,
