@@ -16,4 +16,4 @@ export const database = [
 ];
 
 // Global constants
-export const appName = "Trash Helper";
+export const appName = "Trash Assistant";
