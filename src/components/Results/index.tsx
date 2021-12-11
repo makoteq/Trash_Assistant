@@ -25,12 +25,20 @@ export const Results: FC<{}> = (_) => {
   );
   const model = useContext(modelCtx);
   const getBestGuess = (g: string) => g.split(",")[0];
-  const getDescription = (arg:string) => {
-    switch(arg){
+  const getDescription = (arg: string) => {
+    switch (arg) {
       case "_0":
+        return "Papier";
+      case "_1":
         return "Tworzywa Sztuczne i Metale";
+      case "_2":
+        return "Szkło";
+      case "_3":
+        return "Bio";
+      case "_4":
+        return "Resztkowe";
     }
-  }
+  };
   const container = {
     padding: "20px",
     height: "60vh",
