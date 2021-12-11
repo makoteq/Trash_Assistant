@@ -36,6 +36,7 @@ export const Overlay: FC = () => {
                     const guess = modelResult?.[0].className.split(",")[0] ?? "";
                     const result = database.find((e) => e.AIname.indexOf(guess) !== -1);
                     console.log(guess);
+                    alert(guess);
                     spawnDialog(
                         (c) => {
                             return (
