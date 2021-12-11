@@ -29,7 +29,7 @@
 
 ## Usage
 
-Simply visit our internet website https://eco-hack.herokuapp.com/ and start saving our planet!
+Simply visit our internet website ...?
 
 ## Project Status:
 
