@@ -1,6 +1,7 @@
 import { MobileNet } from "@tensorflow-models/mobilenet";
 import { Context, createContext } from "react";
 
+// Global application contexts
 export const videoStreamCtx = createContext(null) as Context<MediaStream | null>;
 export const modelCtx = createContext(null) as Context<MobileNet | null>;
 
@@ -13,3 +14,6 @@ export const database = [
     { AIname: "cash machine", type: "paper" },
     { AIname: "cash machine", type: "paper" },
 ];
+
+// Global constants
+export const appName = "Trash Helper";

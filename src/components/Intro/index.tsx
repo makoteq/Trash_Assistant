@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { appName } from "../../constants";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { IntroPage } from "../IntroPage";
@@ -6,7 +7,7 @@ import style from "./index.module.scss";
 
 const pages = [
     <div></div>,
-    <IntroPage title="Witaj w Trash Helper™" content={<img alt="application logo" src="logo192.png" />} />,
+    <IntroPage title={`Witaj w ${appName}`} content={<img alt="application logo" src="logo192.png" />} />,
     <IntroPage
         title="Jak to działa?"
         content={
