@@ -69,6 +69,7 @@ export const Intro: FC<{ closeFn: (data?: any) => void }> = (props) => {
                 )}
                 {page !== 0 && (
                     <button
+                        autoFocus
                         onClick={() => {
                             if (page + 1 < pages.length) changePage(page + 1);
                             else if (page + 1 === pages.length) {

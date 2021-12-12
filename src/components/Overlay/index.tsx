@@ -35,6 +35,7 @@ export const Overlay: FC = () => {
                 <Icon type="info-circle-fill" size={30} />
             </button>
             <button
+                autoFocus
                 className={`${style.captureBtn} ${landscapeMode ? style.landscape : ""}`}
                 onClick={async () => {
                     const can = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
@@ -46,7 +47,12 @@ export const Overlay: FC = () => {
                             return (
                                 <>
                                     <Results type={result} ai={guess} />
-                                    <button style={{ width: "100%", backgroundColor: result?.color ?? accentColor, border: "0px transparent" }} onClick={c} className="btn-inverse">
+                                    <button
+                                        autoFocus
+                                        style={{ width: "100%", backgroundColor: result?.color ?? accentColor, border: "0px transparent" }}
+                                        onClick={c}
+                                        className="btn-inverse"
+                                    >
                                         Zamknij
                                     </button>
                                 </>

@@ -42,6 +42,7 @@ export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
                 </Box>
             </label>
             <button
+                autoFocus
                 style={{ width: "100%" }}
                 className={"btn-inverse"}
                 onClick={async () => {
@@ -63,7 +64,7 @@ export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
                                         Nie można uzyskać obrazu z wybranej kamery. Upewnij się, że kamera działa i nie jest używana przez inną aplikację.
                                     </h3>
                                     <p style={{ color: "#666666" }}>{(e as Error).message}</p>
-                                    <button className="btn-inverse" style={{ width: "100%" }} onClick={c}>
+                                    <button autoFocus className="btn-inverse" style={{ width: "100%" }} onClick={c}>
                                         Zamknij
                                     </button>
                                 </Box>

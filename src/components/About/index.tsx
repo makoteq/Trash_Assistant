@@ -23,7 +23,7 @@ export const About: FC<{ cfn: (d: any) => void }> = (props) => {
                 >
                     Pokaż prezentację
                 </button>
-                <button style={{ flex: 1 }} onClick={props.cfn} className="btn-inverse">
+                <button autoFocus style={{ flex: 1 }} onClick={props.cfn} className="btn-inverse">
                     Zamknij
                 </button>
             </Box>

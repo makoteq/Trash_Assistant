@@ -35,7 +35,7 @@ export const Video: { Provider: FC<{ data: VideoData }>; initialize: () => Promi
                                         Nie można uzyskać obrazu z wybranej kamery. Upewnij się, że kamera działa i nie jest używana przez inną aplikację.
                                     </h3>
                                     <p style={{ color: "#666666" }}>{(e as Error).message}</p>
-                                    <button className="btn-inverse" style={{ width: "100%" }} onClick={c}>
+                                    <button autoFocus className="btn-inverse" style={{ width: "100%" }} onClick={c}>
                                         Zamknij
                                     </button>
                                 </Box>
