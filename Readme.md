@@ -1,4 +1,4 @@
-![logo](https://user-images.githubusercontent.com/60068941/145684403-9f63086f-db8f-46c1-aa17-214ac0eda08d.png)
+![logo](https://user-images.githubusercontent.com/60068941/145722504-9b54aa9c-e59e-48ed-846e-a69378e3e43f.png)
 
 
 > Trash Assistant - _A friend of the environment_.
