@@ -6,9 +6,12 @@ import style from "./index.module.scss";
 
 export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
     const videoData = useContext(videoDataCtx);
-    const [device, changeDevice] = useState<MediaDeviceInfo>();
+    const [device, changeDevice] = useState<MediaDeviceInfo | null>(videoData?.device ?? null);
     const getDevices = useCallback(async () => {
-        videoData?.setter({ ...videoData, devices: await window.navigator.mediaDevices.enumerateDevices().then((d) => d.filter((d) => d.kind === "videoinput")) });
+        const l = await window.navigator.mediaDevices.enumerateDevices().then((d) => d.filter((d) => d.kind === "videoinput"));
+        videoData?.setter((videoData) => {
+            return { ...videoData, devices: l };
+        });
     }, [videoData]);
 
     return (
@@ -40,7 +43,9 @@ export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
                 onClick={() => {
                     props.cfn();
                     if (device?.deviceId && device?.deviceId !== videoData?.device.deviceId) {
-                        videoData?.setter({ ...videoData, device: device });
+                        videoData?.setter((videoData) => {
+                            return { ...videoData, device: device };
+                        });
                     }
                 }}
             >

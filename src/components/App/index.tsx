@@ -10,10 +10,10 @@ export const App = () => {
     const videoData = useContext(videoDataCtx);
 
     useEffect(() => {
-        if (videoPlayer.current && videoData) {
+        if (videoPlayer.current && videoData?.stream) {
             videoPlayer.current.srcObject = videoData.stream;
         }
-    }, [videoData]);
+    }, [videoData?.stream]);
     useEffect(() => {
         if (window.localStorage.getItem("intro") !== "true") {
             setTimeout(
