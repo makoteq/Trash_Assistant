@@ -7,8 +7,8 @@ import style from "./index.module.scss";
 export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
     const videoData = useContext(videoDataCtx);
     const [device, changeDevice] = useState<MediaDeviceInfo>();
-    const getDevices = useCallback(() => {
-        videoData?.setter({ ...videoData, devices: window.navigator.mediaDevices.enumerateDevices().then((d) => d.filter((d) => d.kind === "videoinput")) });
+    const getDevices = useCallback(async () => {
+        videoData?.setter({ ...videoData, devices: await window.navigator.mediaDevices.enumerateDevices().then((d) => d.filter((d) => d.kind === "videoinput")) });
     }, [videoData]);
 
     return (

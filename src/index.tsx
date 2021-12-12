@@ -27,17 +27,32 @@ const main = async () => {
                 throw new Error("Cannot access any video device");
             })();
         const videoStream =
-            (await window.navigator.mediaDevices?.getUserMedia({ video: { deviceId: videoDeviceId } })) ??
-            (await window.navigator.mediaDevices?.getUserMedia({ video: { facingMode: "environment" } })) ??
+            (await window.navigator.mediaDevices?.getUserMedia({ video: { deviceId: videoDeviceId } }).catch((e) => {
+                if (e instanceof DOMException) {
+                    return null;
+                }
+            })) ??
+            (await window.navigator.mediaDevices?.getUserMedia({ video: { facingMode: "environment" } }).catch((e) => {
+                if (e instanceof DOMException) {
+                    return null;
+                }
+            })) ??
             (() => {
                 throw new Error("Video stream not found");
             })();
         infoLabel.innerHTML = "Wczytywanie aplikacji...";
+        if (videoDevices.length === 0) {
+            throw new Error("No video devices found");
+        }
         const model = await loadModel();
         ReactDOM.render(
             <React.StrictMode>
                 <modelCtx.Provider value={model}>
-                    <VideoProvider devices={videoDevices} device={videoDevices.find((d) => d.deviceId === videoDeviceId) as MediaDeviceInfo} stream={videoStream}>
+                    <VideoProvider
+                        devices={videoDevices}
+                        device={videoDevices.find((d) => d.deviceId === videoDeviceId || d.deviceId === videoStream.getVideoTracks()[0].getSettings().deviceId) as MediaDeviceInfo}
+                        stream={videoStream}
+                    >
                         <App />
                     </VideoProvider>
                 </modelCtx.Provider>
@@ -45,6 +60,7 @@ const main = async () => {
             appContainer
         );
     } catch (e) {
+        console.error(e);
         ReactDOM.render(
             <React.StrictMode>
                 <Box verticalAlignment="center" horizontalAlignment="center" gap={3} direction="column">

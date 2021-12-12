@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 $background: #222222;
-$text: #1A77AA;
+$text: #1a77aa;
 $transitionDuration: 0.2s;
 $borderRadius: 5px;
 
 * {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 body {

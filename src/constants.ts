@@ -1,5 +1,5 @@
 import { MobileNet } from "@tensorflow-models/mobilenet";
-import { Context, createContext } from "react";
+import { Context, createContext, Dispatch, SetStateAction } from "react";
 
 // Global application contexts
 export const videoDataCtx = createContext(null) as Context<VideoData | null>;
@@ -31,5 +31,5 @@ export interface VideoData {
     devices: MediaDeviceInfo[];
     device: MediaDeviceInfo;
     stream: MediaStream;
-    setter: Function;
+    setter: Dispatch<SetStateAction<VideoData>>;
 }
