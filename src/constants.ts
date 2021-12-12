@@ -13,7 +13,7 @@ export const database: DatabaseRecord[] = [
     { AIname: ["pop bottle"], type: "Szkło", color: "#009746", colorName: "Zielony" },
     { AIname: [], type: "Bio", color: "#8F7459", colorName: "Brązowy" },
     { AIname: ["lighter"], type: "Zmieszane", color: "#2C2928", colorName: "Czarny" },
-    { AIname: ["cellular telephone", "iPod"], type: "PSZOK", color: "#2C2928", colorName: "Czarny" },
+    { AIname: ["cellular telephone", "iPod"], type: "PSZOK", color: "#DB3747", colorName: "Czerwony" },
 ];
 
 // Global constants
