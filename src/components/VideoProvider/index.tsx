@@ -14,7 +14,7 @@ export const VideoProvider: FC<{ devices: MediaDeviceInfo[]; device: MediaDevice
             };
         });
         Object.freeze(videoData.setter);
-    }, [props.devices, props.device, props.stream, videoData.setter]);
+    }, [videoData.setter]);
     useEffect(() => {
         window.localStorage.setItem("videoDeviceId", videoData.device.deviceId);
         window.navigator.mediaDevices

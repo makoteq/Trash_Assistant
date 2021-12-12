@@ -17,26 +17,29 @@ export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
     return (
         <Box direction="column" verticalAlignment="center" horizontalAlignment="center" gap={10}>
             <h1>Ustawienia</h1>
-            <Box direction="row" gap={5} verticalAlignment="center">
-                <select
-                    className={style.cameraSelector}
-                    defaultValue={videoData?.device.deviceId}
-                    onChange={(e) => {
-                        e.preventDefault();
-                        const d = videoData?.devices.find((d) => d.deviceId === e.target.value);
-                        d && changeDevice(d);
-                    }}
-                >
-                    {videoData?.devices.map((d) => (
-                        <option key={d.deviceId} value={d.deviceId}>
-                            {d.label}
-                        </option>
-                    ))}
-                </select>
-                <button onClick={getDevices}>
-                    <Icon className={style.refreshBtn} type="arrow-clockwise" size={20} />
-                </button>
-            </Box>
+            <label>
+                Wybierz kamerę
+                <Box direction="row" gap={5} verticalAlignment="center">
+                    <select
+                        className={style.cameraSelector}
+                        defaultValue={videoData?.device.deviceId}
+                        onChange={(e) => {
+                            e.preventDefault();
+                            const d = videoData?.devices.find((d) => d.deviceId === e.target.value);
+                            d && changeDevice(d);
+                        }}
+                    >
+                        {videoData?.devices.map((d) => (
+                            <option key={d.deviceId} value={d.deviceId}>
+                                {d.label}
+                            </option>
+                        ))}
+                    </select>
+                    <button onClick={getDevices}>
+                        <Icon className={style.refreshBtn} type="arrow-clockwise" size={20} />
+                    </button>
+                </Box>
+            </label>
             <button
                 style={{ width: "100%" }}
                 className={"btn-inverse"}
