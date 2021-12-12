@@ -1,5 +1,6 @@
 import { FC, useCallback, useContext, useState } from "react";
 import { videoDataCtx } from "../../constants";
+import { spawnDialog } from "../AlertDialog/spawnDialog";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import style from "./index.module.scss";
@@ -43,11 +44,30 @@ export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
             <button
                 style={{ width: "100%" }}
                 className={"btn-inverse"}
-                onClick={() => {
+                onClick={async () => {
                     props.cfn();
-                    if (device?.deviceId && device?.deviceId !== videoData?.device.deviceId) {
-                        videoData?.setter((videoData) => {
-                            return { ...videoData, device: device };
+                    try {
+                        if (device?.deviceId && device?.deviceId !== videoData?.device.deviceId) {
+                            const stream = await window.navigator.mediaDevices.getUserMedia({ video: { deviceId: device.deviceId } });
+                            videoData?.stream.getTracks().forEach((t) => t.stop());
+                            videoData?.setter((videoData) => {
+                                return { ...videoData, stream: stream, device: device };
+                            });
+                        }
+                    } catch (e) {
+                        spawnDialog((c) => {
+                            return (
+                                <Box direction="column" verticalAlignment="center" horizontalAlignment="center" gap={10}>
+                                    <Icon type="x-circle" color="#ff0000" size={90} />
+                                    <h3 style={{ color: "#ff0000" }}>
+                                        Nie można uzyskać obrazu z wybranej kamery. Upewnij się, że kamera działa i nie jest używana przez inną aplikację.
+                                    </h3>
+                                    <p style={{ color: "#666666" }}>{(e as Error).message}</p>
+                                    <button className="btn-inverse" style={{ width: "100%" }} onClick={c}>
+                                        Zamknij
+                                    </button>
+                                </Box>
+                            );
                         });
                     }
                 }}
