@@ -8,14 +8,28 @@ export const modelCtx = createContext(null) as Context<MobileNet | null>;
 //0-papier,1-metale i tworzywa sztuczne,2-szkło,3-bio,4-resztkowe
 export const database: DatabaseRecord[] = [
     {
-        AIname: ["paper"],
+        AIname: ["paper", "crossword puzzle", "envelope", "toilet tissue"],
         type: "Papier",
         color: "#383087",
         colorName: "Kolor pojemnika: Niebieski",
     },
     {
-        AIname: ["plastic bag", "cup", "water bottle", "pill bottle", "measuring cup", "water jug", "hair spray", "pong ball"],
-        type: "Tworzywa sztuczne i Metale",
+        AIname: [
+            "plastic bag",
+            "water bottle",
+            "pill bottle",
+            "measuring cup",
+            "water jug",
+            "hair spray",
+            "pong ball",
+            "sunglasses",
+            "stretcher",
+            "hair slide",
+            "lipstick",
+            "pencil sharpener",
+            "fountain pen",
+        ],
+        type: "Tworzywa sztuczne",
         color: "rgb(255,255,0)",
         colorName: "Kolor pojemnika: Żółty",
     },
@@ -26,7 +40,7 @@ export const database: DatabaseRecord[] = [
         colorName: "Kolor pojemnika: Czerwony",
     },
     {
-        AIname: ["pop bottle", "coffee mug"],
+        AIname: ["pop bottle", "coffee mug", "cup"],
         type: "Szkło",
         color: "#009746",
         colorName: "Kolor pojemnika: Zielony",
@@ -40,11 +54,11 @@ export const database: DatabaseRecord[] = [
     {
         AIname: ["lighter"],
         type: "Zmieszane",
-        color: "#2C2928",
+        color: "#807571",
         colorName: "Kolor pojemnika: Czarny",
     },
     {
-        AIname: ["cellular telephone", "iPod"],
+        AIname: ["cellular telephone", "iPod", "mouse", "keyboard", "laptop", "desktop computer", "toaster", "monitor", "television", "joystick"],
         type: "PSZOK",
         color: "#DB3747",
         colorName: "Oddaj do punktu PSZOK",
