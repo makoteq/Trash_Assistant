@@ -34,3 +34,10 @@ $padding: 15px;
     top: $padding;
     font-size: 15px;
 }
+
+.landscape {
+    bottom: 50%;
+    transform: translateY(50%);
+    right: $padding;
+    left: initial;
+}

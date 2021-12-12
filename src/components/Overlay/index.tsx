@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 import { spawnDialog } from "../AlertDialog/spawnDialog";
 import { accentColor, database, modelCtx, videoDataCtx } from "../../constants";
 import { About } from "../About";
@@ -11,6 +11,12 @@ import { Settings } from "../Settings";
 export const Overlay: FC = () => {
     const model = useContext(modelCtx);
     const videoData = useContext(videoDataCtx);
+    const [landscapeMode, changeLandscape] = useState(window.outerWidth > window.outerHeight);
+    useEffect(() => {
+        window.addEventListener("resize", (e) => {
+            changeLandscape(window.outerWidth > window.outerHeight);
+        });
+    }, []);
     return (
         <div className={style.container}>
             <button
@@ -29,7 +35,7 @@ export const Overlay: FC = () => {
                 <Icon type="info-circle-fill" size={30} />
             </button>
             <button
-                className={style.captureBtn}
+                className={`${style.captureBtn} ${landscapeMode ? style.landscape : ""}`}
                 onClick={async () => {
                     const can = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
                     const modelResult = await model?.classify(can);
