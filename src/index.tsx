@@ -66,7 +66,10 @@ const main = async () => {
                 <Box verticalAlignment="center" horizontalAlignment="center" gap={3} direction="column">
                     <Icon type={"x-circle"} color={"#ff0000"} size={120}></Icon>
                     <h1 style={{ color: "#ff0000" }}>Podczas ładowania aplikacji wystąpił błąd</h1>
-                    <h2 style={{ color: "#ff0000" }}>Upewnij się, że przyznałeś stronie odpowiednie uprawnienia oraz że twoje urządzenie obsługuje wymagane funkcje</h2>
+                    <h3 style={{ color: "#ff0000" }}>
+                        Upewnij się, że strona posiada odpowiednie uprawnienia a urządzenie obsługuje wymagane funkcje. W przypadku niektórych urządzeń wymagane będzie również
+                        połączenie HTTPS.
+                    </h3>
                     <p style={{ color: "#666666" }}>{(e as Error).message}</p>
                 </Box>
             </React.StrictMode>,

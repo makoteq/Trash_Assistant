@@ -60,6 +60,14 @@ button {
     }
 }
 
+a {
+    color: $text;
+    transition: color 0.3s ease;
+    &:hover {
+        color: white !important;
+    }
+}
+
 ::selection {
     background-color: darken($text, 20%);
     color: black;

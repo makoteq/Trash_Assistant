@@ -12,8 +12,8 @@ const pages = [
         title="Jak to działa?"
         content={
             <p>
-                Masz problem przy zapamiątaniu podstawowych zasad sortowania odpadów? Ta aplikacja ci w tym pomoże. To bardzo proste. Naceluj kamerą na objekt, który zamierzasz
-                wyrzucić i naciśnij przycisk z ikoną <Icon type="camera" size={20} /> u dołu ekranu.
+                Masz problem przy zapamiątaniu podstawowych zasad sortowania odpadów? Ta aplikacja Tobie pomoże. Po prostu naceluj kamerą na objekt, który zamierzasz wyrzucić i
+                naciśnij przycisk z ikoną <Icon type="camera" size={20} /> znajdujący się u dołu ekranu.
             </p>
         }
     />,
@@ -21,8 +21,8 @@ const pages = [
         title="Technologia"
         content={
             <p>
-                Aplikacja korzysta z nowoczesnej technologi opartej na sztucznej inteligencji, która używa mocy obliczeniowej urządzenia w celu rozpoznawania i klasyfikowania
-                różnych typów odpadów.
+                Aplikacja korzysta z nowoczesnej technologi opartej na sztucznej inteligencji. Używa ona mocy obliczeniowej urządzenia w celu rozpoznawania i klasyfikowania różnych
+                typów odpadów.
             </p>
         }
     />,
@@ -30,7 +30,12 @@ const pages = [
         title="Więcej"
         content={
             <p>
-                Aby uzyskać informacje o autorach projektu skorzystaj z przycisku <Icon type="info-circle" size={20} /> w prawym górnym rogu ekranu.
+                Aby uzyskać informacje o autorach projektu skorzystaj z przycisku <Icon type="info-circle" size={20} /> w prawym górnym rogu ekranu. Zachęcamy również do zapoznania
+                się z dokumentem{" "}
+                <a target={"_blank"} rel="noreferrer" href="https://github.com/makoteq/AI_trash#readme">
+                    README
+                </a>{" "}
+                w celu uzyskania bardziej szczegółowych informacji na temat projektu.
             </p>
         }
     />,
@@ -49,14 +54,17 @@ export const Intro: FC<{ closeFn: (data?: any) => void }> = (props) => {
         <div className={style.container}>
             <div>{pages[page]}</div>
             <Box direction="row" verticalAlignment="center" gap={10}>
-                {page !== 0 && page !== 1 && (
+                {page !== 0 && (
                     <button
                         style={{ flex: 1 }}
                         onClick={() => {
-                            if (page - 1 >= 1) changePage(page - 1);
+                            if (page === 1) {
+                                props.closeFn();
+                                window.localStorage.setItem("intro", "true");
+                            } else if (page - 1 >= 1) changePage(page - 1);
                         }}
                     >
-                        <Icon type="arrow-left" /> Wstecz
+                        <Icon type="arrow-left" /> {page !== 1 ? "Wstecz" : "Pomiń"}
                     </button>
                 )}
                 {page !== 0 && (
