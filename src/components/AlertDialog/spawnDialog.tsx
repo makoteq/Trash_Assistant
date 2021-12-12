@@ -24,6 +24,7 @@ export const spawnDialog = async (elements: (close: (data?: any) => void) => Rea
                 {
                     easing: "ease",
                     duration: animationDuration,
+                    fill: "both",
                 }
             );
             setTimeout(() => {
@@ -49,6 +50,7 @@ export const spawnDialog = async (elements: (close: (data?: any) => void) => Rea
             {
                 easing: "ease",
                 duration: animationDuration,
+                fill: "both",
             }
         );
     });

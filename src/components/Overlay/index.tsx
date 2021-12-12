@@ -35,13 +35,11 @@ export const Overlay: FC = () => {
                     const modelResult = await model?.classify(can);
                     const guess = modelResult?.[0].className.split(",")[0] ?? "";
                     const result = database.find((e) => e.AIname.indexOf(guess) !== -1);
-                    console.log(guess);
-                    alert(guess);
                     spawnDialog(
                         (c) => {
                             return (
                                 <>
-                                    <Results type={result} />
+                                    <Results type={result} ai={guess} />
                                     <button style={{ width: "100%", backgroundColor: result?.color ?? accentColor, border: "0px transparent" }} onClick={c} className="btn-inverse">
                                         Zamknij
                                     </button>
@@ -49,12 +47,6 @@ export const Overlay: FC = () => {
                             );
                         },
                         {
-                            padding: "20px",
-                            minWidth: "40vw",
-                            maxWidth: "80vw",
-                            borderRadius: "10px",
-                            color: "#000",
-                            fontWeight: 700,
                             fontSize: "1.8em",
                         }
                     );
