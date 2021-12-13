@@ -40,5 +40,5 @@
 ## Autorzy
 
 -   [makoteq](https://github.com/makoteq) - pomysłodawca, zarządzanie, hosting, AI integration
--   [grzana](https://github.com/grz4na) - frontend, AI integration, PWA engine
+-   [GRZANA](https://github.com/grz4na) - frontend, AI integration, PWA engine
 -   [drgoodcat](https://github.com/drgoodcat) - prezentacja
