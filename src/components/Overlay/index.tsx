@@ -46,7 +46,7 @@ export const Overlay: FC = () => {
                         (c) => {
                             return (
                                 <>
-                                    <Results type={result} ai={guess} />
+                                    <Results type={result} />
                                     <button
                                         autoFocus
                                         style={{ width: "100%", backgroundColor: result?.color ?? accentColor, border: "0px transparent" }}
