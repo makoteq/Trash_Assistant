@@ -38,6 +38,7 @@ button {
     transition: all $transitionDuration ease;
     border: 1.5px solid lighten($background, 10%);
     cursor: pointer;
+    font-weight: 600;
     &:hover {
         background-color: lighten($background, 10%);
         border-color: lighten($background, 20%);
