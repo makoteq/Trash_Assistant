@@ -8,7 +8,7 @@ import style from "./index.module.scss";
 
 const pages = [
     <div></div>,
-    <IntroPage title={`Witaj w ${appName}`} content={<img alt="Ikona aplikacji Trash Assistant" src="logo192.png" />} />,
+    <IntroPage title={`Witaj w ${appName}`} content={<img alt="Ikona aplikacji Trash Assistant" src="logo192.png" style={{ height: "20vh", maxHeight: "192px" }} />} />,
     <IntroPage
         title="Jak to działa?"
         content={

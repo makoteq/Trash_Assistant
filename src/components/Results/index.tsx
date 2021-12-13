@@ -11,7 +11,6 @@ export const Results: FC<{ type?: DatabaseRecord }> = (props) => {
                 {props.type?.type}
             </h1>
             <Box direction="column" verticalAlignment="center">
-                <Icon className={style.arrow} type="arrow-down" color={props.type?.color} size={90} />
                 <Icon className={style.trash} type="trash" color={props.type?.color} size={120} />
             </Box>
             <p className={style.color} style={{ color: props.type?.color }}>
