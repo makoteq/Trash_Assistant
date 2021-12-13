@@ -43,14 +43,14 @@ export const database: DatabaseRecord[] = [
       "plastic bag",
       "pot",
       "safety pin",
-      
+
     ],
     type: "Tworzywa sztuczne i Metale",
     color: "rgb(255,255,0)",
     colorName: "Kolor pojemnika: Żółty",
   },
   {
-    AIname: ["pop bottle", "beer bottle", "beer glass", "red wine"],
+    AIname: ["pop bottle", "beer bottle", "beer glass", "red wine","wine bottle"],
     type: "Szkło",
     color: "#009746",
     colorName: "Kolor pojemnika: Zielony",
@@ -92,6 +92,9 @@ export const database: DatabaseRecord[] = [
       "dishrag",
       "cup", 
       "sunglasses",
+      "sunglass",
+      "vase",
+      "plate"
     ],
     type: "Zmieszane",
     color: "#807571",
@@ -119,7 +122,10 @@ export const database: DatabaseRecord[] = [
       "espresso maker",
       "hard disc",
       "microwave",
-      "radio"
+      "radio",
+      "tape player",
+      "toaster",
+
     ],
     type: "PSZOK",
     color: "#DB3747",
