@@ -8,6 +8,7 @@
 -   [Technologie](#technologie)
 -   [Zrzuty ekranu](#zrzuty-ekranu)
 -   [Korzystanie z aplikacji](#korzystanie-z-aplikacji)
+-   [Autorzy](#autorzy)
 
 ## Podstawowe informacje
 
@@ -35,3 +36,9 @@
 1. Otwórz aplikację i przyznaj jej uprawnienia dostępu do aparatu
 2. Naceluj kamerą na śmiecia, którego chcesz zeskanować
 3. Naciśnij przycisk z ikoną aparatu aby zobaczyć rezultaty
+
+## Autorzy
+
+-   [makoteq](https://github.com/makoteq) - pomysłodawca, zarządzanie, hosting
+-   [grzana](https://github.com/grz4na) - frontend, technologie
+-   [drgoodcat](https://github.com/drgoodcat) - zarządzanie bazą danych, prezentacja
