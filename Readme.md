@@ -1,32 +1,33 @@
-![logo](https://user-images.githubusercontent.com/60068941/145722504-9b54aa9c-e59e-48ed-846e-a69378e3e43f.png)
+![logo](https://raw.githubusercontent.com/makoteq/Trash_Assistant/master/public/logo192.png?token=ARX2MZQ6VGNKTXSFKK4NMKTBYCMEM)
 
+# [Trash Assistant](https://trash-assistant.netlify.app) - aplikacja pomagająca w sortowaniu śmieci
 
-> Trash Assistant - _A friend of the environment_.
+## Spis treści
 
-## Table of Contents
+-   [Podstawowe informacje](#podstawowe-informacje)
+-   [Technologie](#technologie)
+-   [Zrzuty ekranu](#zrzuty-ekranu)
+-   [Korzystanie z aplikacji](#korzystanie-z-aplikacji)
 
--   [General Info](#general-information)
--   [Technologies Used](#technologies-used)
--   [Screenshots](#screenshots)
--   [Usage](#usage)
+## Podstawowe informacje
 
-## General Information
+-   Aplikacja została stworzona jako projekt konkursowy do drugiej edycji Mini Hackathon Nowa Akademia
+-   Aplikacja korzysta z nowoczesnej technologii opartej na sztucznej inteligencji do rozpoznawania śmieci różnego rodzaju
+-   Celem naszej aplikacji jest uczynienie ważnego dla środowiska procesu recyklingu prostszym i bardziej przyjemnym
 
--   The App was created for the mini Hackathon - edycja II organised by Nowa Akademia.
--   The App is using an AI system that detects the type of waste.
--   The goal of our app is to make recycling more effective and enjoyable.
-
-## Technologies Used
+## Technologie
 
 -   React
--   Tenserflow
+-   TenserFlow
 -   Sass
--   PWA
+-   Progressive Web Apps
 
-## Screenshots
+## Zrzuty ekranu
 
-![image](https://pbs.twimg.com/media/E5oNDbhUcAU4Wwi.jpg)
+**ZRZUTY EKRANU**
 
-## Usage
+## Korzystanie z aplikacji
 
-Simply visit our internet website ...?
+1. Otwórz aplikację i przyznaj jej uprawnienia dostępu do aparatu
+2. Naceluj kamerą na śmiecia, którego chcesz zeskanować
+3. Naciśnij przycisk z ikoną aparatu aby zobaczyć rezultaty
