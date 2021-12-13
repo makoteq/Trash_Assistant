@@ -41,4 +41,4 @@
 
 -   [makoteq](https://github.com/makoteq) - pomysłodawca, zarządzanie, hosting, AI integration
 -   [grzana](https://github.com/grz4na) - frontend, AI integration, PWA engine
--   [drgoodcat](https://github.com/drgoodcat) - zarządzanie bazą danych, prezentacja
+-   [drgoodcat](https://github.com/drgoodcat) - prezentacja
