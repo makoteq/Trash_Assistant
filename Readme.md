@@ -24,7 +24,11 @@
 
 ## Zrzuty ekranu
 
-**ZRZUTY EKRANU**
+<p float="left">
+<img src="https://raw.githubusercontent.com/makoteq/Trash_Assistant/master/readme%20img/screen1.jpg?token=AKGFD2FQJFUMSCCWHXW2FYTBYCMDI" width="250" >
+<img src="https://raw.githubusercontent.com/makoteq/Trash_Assistant/master/readme%20img/screen2.jpg?token=AKGFD2AAVEMYEI4HCT7LZGLBYCMFG" width="250" >
+<img src="https://raw.githubusercontent.com/makoteq/Trash_Assistant/master/readme%20img/screen3.jpg?token=AKGFD2BMTEDVFVMBZGHIVETBYCMGO" width="250" >
+<p>
 
 ## Korzystanie z aplikacji
 
