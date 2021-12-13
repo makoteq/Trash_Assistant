@@ -39,6 +39,11 @@ export const database: DatabaseRecord[] = [
       "chain",
       "corkscrew",
       "milk can",
+      "pick",
+      "plastic bag",
+      "pot",
+      "safety pin",
+      
     ],
     type: "Tworzywa sztuczne i Metale",
     color: "rgb(255,255,0)",
@@ -113,10 +118,11 @@ export const database: DatabaseRecord[] = [
       "espresso maker",
       "hard disc",
       "microwave",
+      "radio"
     ],
     type: "PSZOK",
     color: "#DB3747",
-    colorName: "Oddaj do punktu PSZOK",
+    colorName: "Oddaj do punktu punktu selektywnego zbierania odpadów komunalnych",
   },
 ];
 
