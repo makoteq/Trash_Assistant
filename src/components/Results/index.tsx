@@ -22,9 +22,8 @@ export const Results: FC<{ type?: DatabaseRecord; ai?: string }> = (props) => {
         <Box direction="column" gap={10} verticalAlignment="center" horizontalAlignment="center">
             <Icon className={style.trash} type="x-circle" color={"#ff0000"} size={120} />
             <h1 className={style.color} style={{ color: "#ff0000" }}>
-                Niestety nie udało się rozpoznać typu odpadu
+              Nie znaleziono odpadu
             </h1>
-            {props.ai && <p style={{ color: "#666666", fontSize: "20px", fontWeight: "normal" }}>Znalezione dopasowanie: {props.ai}</p>}
         </Box>
     );
 };
