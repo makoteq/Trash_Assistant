@@ -36,12 +36,13 @@ export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
                             </option>
                         ))}
                     </select>
-                    <button onClick={getDevices}>
+                    <button aria-label="Odśwież listę urządzeń" onClick={getDevices}>
                         <Icon className={style.refreshBtn} type="arrow-clockwise" size={20} />
                     </button>
                 </Box>
             </label>
             <button
+                aria-label="Zamknij okno i zapisz ustawienia"
                 autoFocus
                 style={{ width: "100%" }}
                 className={"btn-inverse"}
@@ -64,7 +65,7 @@ export const Settings: FC<{ cfn: (data?: any) => void }> = (props) => {
                                         Nie można uzyskać obrazu z wybranej kamery. Upewnij się, że kamera działa i nie jest używana przez inną aplikację.
                                     </h3>
                                     <p style={{ color: "#666666" }}>{(e as Error).message}</p>
-                                    <button autoFocus className="btn-inverse" style={{ width: "100%" }} onClick={c}>
+                                    <button aria-label="Zamknij okno dialogowe" autoFocus className="btn-inverse" style={{ width: "100%" }} onClick={c}>
                                         Zamknij
                                     </button>
                                 </Box>

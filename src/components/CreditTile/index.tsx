@@ -5,6 +5,7 @@ import style from "./index.module.scss";
 export const CreditTile: FC<{ title: string; imageUrl?: string; gh?: string; delay?: number }> = (props) => {
     return (
         <a
+            aria-label={props.title}
             target={"_blank"}
             style={{ animationDelay: `${props.delay ? props.delay + 300 : 300}ms` }}
             className={style.container}

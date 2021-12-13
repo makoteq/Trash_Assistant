@@ -29,6 +29,7 @@ export const About: FC<{ cfn: (d: any) => void }> = (props) => {
             </Box>
             <Box className={style.buttons} gap={5} direction="row" verticalAlignment="center">
                 <button
+                    aria-label="Pokaż prezentację"
                     style={{ flex: 1 }}
                     onClick={() => {
                         window.localStorage.setItem("intro", "false");
@@ -37,7 +38,7 @@ export const About: FC<{ cfn: (d: any) => void }> = (props) => {
                 >
                     Pokaż prezentację
                 </button>
-                <button autoFocus style={{ flex: 1 }} onClick={props.cfn} className="btn-inverse">
+                <button aria-label="Zamknij okno dialogowe" autoFocus style={{ flex: 1 }} onClick={props.cfn} className="btn-inverse">
                     Zamknij
                 </button>
             </Box>

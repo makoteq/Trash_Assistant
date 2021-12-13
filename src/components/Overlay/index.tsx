@@ -20,6 +20,7 @@ export const Overlay: FC = () => {
     return (
         <div className={style.container}>
             <button
+                aria-label="Ustawienia aplikacji"
                 className={style.settingsBtn}
                 onClick={() =>
                     spawnDialog((c) => (
@@ -31,10 +32,11 @@ export const Overlay: FC = () => {
             >
                 <Icon type="gear-fill" size={30} />
             </button>
-            <button className={style.aboutBtn} onClick={() => spawnDialog((c) => <About cfn={c} />)}>
+            <button aria-label="Informacje o aplikacji" className={style.aboutBtn} onClick={() => spawnDialog((c) => <About cfn={c} />)}>
                 <Icon type="info-circle-fill" size={30} />
             </button>
             <button
+                aria-label="Przechwytywanie"
                 autoFocus
                 className={`${style.captureBtn} ${landscapeMode ? style.landscape : ""}`}
                 onClick={async () => {
@@ -48,6 +50,7 @@ export const Overlay: FC = () => {
                                 <>
                                     <Results type={result} />
                                     <button
+                                        aria-label="Zamknij okno dialogowe"
                                         autoFocus
                                         style={{ width: "100%", backgroundColor: result?.color ?? accentColor, border: "0px transparent" }}
                                         onClick={c}

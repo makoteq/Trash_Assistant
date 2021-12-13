@@ -8,7 +8,7 @@ import style from "./index.module.scss";
 
 const pages = [
     <div></div>,
-    <IntroPage title={`Witaj w ${appName}`} content={<img alt="application logo" src="logo192.png" />} />,
+    <IntroPage title={`Witaj w ${appName}`} content={<img alt="Ikona aplikacji Trash Assistant" src="logo192.png" />} />,
     <IntroPage
         title="Jak to działa?"
         content={
@@ -53,6 +53,7 @@ export const Intro: FC<{ closeFn: (data?: any) => void }> = (props) => {
             <Box direction="row" verticalAlignment="center" gap={10}>
                 {page !== 0 && (
                     <button
+                        aria-label="Wstecz"
                         style={{ flex: 1 }}
                         onClick={() => {
                             if (page === 1) {
@@ -66,6 +67,7 @@ export const Intro: FC<{ closeFn: (data?: any) => void }> = (props) => {
                 )}
                 {page !== 0 && (
                     <button
+                        aria-label="Dalej"
                         autoFocus
                         onClick={() => {
                             if (page + 1 < pages.length) changePage(page + 1);
