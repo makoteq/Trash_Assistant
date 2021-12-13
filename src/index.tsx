@@ -58,6 +58,9 @@ const main = async () => {
                                         </option>
                                     ))}
                                 </select>
+                                <button aria-label="Odśwież stronę" onClick={() => window.location.reload()}>
+                                    <Icon className={style.refreshBtn} type="arrow-clockwise" size={20} />
+                                </button>
                             </Box>
                         </label>
                     )}
