@@ -40,7 +40,7 @@ export const database: DatabaseRecord[] = [
       "corkscrew",
       "milk can",
     ],
-    type: "Tworzywa sztuczne",
+    type: "Tworzywa sztuczne i Metale",
     color: "rgb(255,255,0)",
     colorName: "Kolor pojemnika: Żółty",
   },
