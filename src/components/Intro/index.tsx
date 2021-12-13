@@ -13,7 +13,7 @@ const pages = [
         title="Jak to działa?"
         content={
             <p>
-                Masz problem przy zapamiątaniu podstawowych zasad sortowania odpadów? Ta aplikacja Tobie pomoże. Po prostu naceluj kamerą na objekt, który zamierzasz wyrzucić i
+                Masz problem z zapamiętywaniem podstawowych zasad sortowania odpadów? Ta aplikacja jest dla Ciebie. Po prostu naceluj kamerą na obiekt, który zamierzasz wyrzucić i
                 naciśnij przycisk z ikoną <Icon type="camera" size={20} /> znajdujący się u dołu ekranu.
             </p>
         }
@@ -37,7 +37,10 @@ const pages = [
             </p>
         }
     />,
-    <IntroPage title="Zaczynamy" content={<p>Na początek znajdź i spróbuj zeskanować plastikową butelkę</p>} />,
+    <IntroPage
+        title="Zaczynamy"
+        content={<p>Na początek znajdź dowolony przedmiot, który nadaje się do wyrzucenia (np. plastikową butelkę po napoju) i spróbuj go zeskanować.</p>}
+    />,
 ];
 
 export const Intro: FC<{ closeFn: (data?: any) => void }> = (props) => {

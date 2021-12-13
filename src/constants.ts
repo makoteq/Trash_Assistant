@@ -79,7 +79,7 @@ export const database: DatabaseRecord[] = [
             "plate",
             "measuring cup",
         ],
-        type: "Zmieszane",
+        type: "Mieszane",
         color: "#807571",
         colorName: "Kolor pojemnika: Czarny",
     },
@@ -111,7 +111,7 @@ export const database: DatabaseRecord[] = [
         ],
         type: "PSZOK",
         color: "#DB3747",
-        colorName: "Oddaj do punktu punktu selektywnego zbierania odpadów komunalnych",
+        colorName: "Oddaj do punktu selektywnego zbierania odpadów komunalnych",
     },
 ];
 
