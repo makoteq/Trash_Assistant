@@ -57,8 +57,8 @@ export const database: DatabaseRecord[] = [
       "lemon",
       "strawberry",
       "banana",
-      "apple",
       "honeycomb",
+      "custard apple"
     ],
     type: "Bio",
     color: "#8F7459",
