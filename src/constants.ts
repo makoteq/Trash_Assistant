@@ -26,7 +26,6 @@ export const database: DatabaseRecord[] = [
       "plastic bag",
       "water bottle",
       "pill bottle",
-      "measuring cup",
       "water jug",
       "pong ball",
       "ashcan",
@@ -94,7 +93,8 @@ export const database: DatabaseRecord[] = [
       "sunglasses",
       "sunglass",
       "vase",
-      "plate"
+      "plate",
+      "measuring cup",
     ],
     type: "Zmieszane",
     color: "#807571",
