@@ -2,12 +2,26 @@ import { FC } from "react";
 import { appName } from "../../constants";
 import { Box } from "../Box";
 import { CreditTile } from "../CreditTile";
+import { Link } from "../Link";
 import style from "./index.module.scss";
 
 export const About: FC<{ cfn: (d: any) => void }> = (props) => {
     return (
         <Box direction="column" gap={10} horizontalAlignment="center" verticalAlignment="center">
             <h1>{appName}</h1>
+            <p className={style.infoLbl}>
+                Projekt konkursowy{" "}
+                <i>
+                    <Link to="https://nowaakademia.org/mini-hackathon-edycja-ii/">Mini Hackathon Nowa Akademia (edycja II.)</Link>
+                </i>
+            </p>
+            <p className={style.infoLbl}>
+                Kod źródłowy aplikacji dostępny na{" "}
+                <i>
+                    <Link to="https://github.com/makoteq/trash_assistant">GitHub</Link>
+                </i>
+            </p>
+            <h3 className={style.creatorHdr}>Twórcy projektu</h3>
             <Box className={style.container} direction="row" gap={5} horizontalAlignment={"center"} verticalAlignment="center">
                 <CreditTile title="GRZ4NA" imageUrl="https://avatars.githubusercontent.com/u/74425958?v=4" gh="grz4na" delay={0} />
                 <CreditTile title="makoteq" imageUrl="https://avatars.githubusercontent.com/u/42750440?v=4" gh="makoteq" delay={100} />

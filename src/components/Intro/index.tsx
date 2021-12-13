@@ -3,6 +3,7 @@ import { appName } from "../../constants";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { IntroPage } from "../IntroPage";
+import { Link } from "../Link";
 import style from "./index.module.scss";
 
 const pages = [
@@ -31,11 +32,7 @@ const pages = [
         content={
             <p>
                 Aby uzyskać informacje o autorach projektu skorzystaj z przycisku <Icon type="info-circle" size={20} /> w prawym górnym rogu ekranu. Zachęcamy również do zapoznania
-                się z dokumentem{" "}
-                <a target={"_blank"} rel="noreferrer" href="https://github.com/makoteq/AI_trash#readme">
-                    README
-                </a>{" "}
-                w celu uzyskania bardziej szczegółowych informacji na temat projektu.
+                się z dokumentem <Link to="https://github.com/makoteq/AI_trash#readme">README</Link> w celu uzyskania bardziej szczegółowych informacji na temat projektu.
             </p>
         }
     />,
