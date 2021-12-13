@@ -11,7 +11,7 @@
 
 ## Podstawowe informacje
 
--   Aplikacja została stworzona jako projekt konkursowy do drugiej edycji Mini Hackathon Nowa Akademia
+-   Aplikacja została stworzona jako projekt konkursowy do drugiej edycji [Mini Hackathon Nowa Akademia](https://nowaakademia.org/mini-hackathon-edycja-ii/)
 -   Aplikacja korzysta z nowoczesnej technologii opartej na sztucznej inteligencji do rozpoznawania śmieci różnego rodzaju
 -   Celem naszej aplikacji jest uczynienie ważnego dla środowiska procesu recyklingu prostszym i bardziej przyjemnym
 
