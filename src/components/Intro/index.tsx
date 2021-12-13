@@ -28,14 +28,16 @@ const pages = [
         }
     />,
     <IntroPage
-        title="Więcej"
+        title="Informacje"
         content={
             <p>
                 Aby uzyskać informacje o autorach projektu skorzystaj z przycisku <Icon type="info-circle" size={20} /> w prawym górnym rogu ekranu. Zachęcamy również do zapoznania
-                się z dokumentem <Link to="https://github.com/makoteq/AI_trash#readme">README</Link> w celu uzyskania bardziej szczegółowych informacji na temat projektu.
+                się z dokumentem <Link to="https://github.com/makoteq/AI_trash#readme">README</Link> w celu uzyskania bardziej szczegółowych informacji na temat projektu. Pamiętaj,
+                że aplikacja jest aktualnie w fazie prototypowej i moduł rozpoznawania obiektów może działać wolno i nieprzewidywalnie.
             </p>
         }
     />,
+    <IntroPage title="Zaczynamy" content={<p>Na początek znajdź i spróbuj zeskanować plastikową butelkę</p>} />,
 ];
 
 export const Intro: FC<{ closeFn: (data?: any) => void }> = (props) => {
