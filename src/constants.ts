@@ -35,7 +35,7 @@ export const database: DatabaseRecord[] = [
     colorName: "Kolor pojemnika: Czerwony",
   },
   {
-    AIname: ["pop bottle", "coffee mug", "cup"],
+    AIname: ["pop bottle", "coffee mug", "cup","beer bottle","beer glass"],
     type: "Szkło",
     color: "#009746",
     colorName: "Kolor pojemnika: Zielony",
