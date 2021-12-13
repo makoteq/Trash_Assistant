@@ -86,6 +86,7 @@ export const database: DatabaseRecord[] = [
       "coffee mug",
       "dishrag",
       "cup", 
+      "sunglasses",
     ],
     type: "Zmieszane",
     color: "#807571",
