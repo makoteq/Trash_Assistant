@@ -24,9 +24,11 @@
 -   PWA
 
 ## Screenshots
-
-![image](https://pbs.twimg.com/media/E5oNDbhUcAU4Wwi.jpg)
-
+<p float="left">
+<img src="https://raw.githubusercontent.com/makoteq/Trash_Assistant/master/readme%20img/screen1.jpg?token=AKGFD2FQJFUMSCCWHXW2FYTBYCMDI" width="300" >
+<img src="https://raw.githubusercontent.com/makoteq/Trash_Assistant/master/readme%20img/screen2.jpg?token=AKGFD2AAVEMYEI4HCT7LZGLBYCMFG" width="300" >
+<img src="https://raw.githubusercontent.com/makoteq/Trash_Assistant/master/readme%20img/screen3.jpg?token=AKGFD2BMTEDVFVMBZGHIVETBYCMGO" width="300" >
+<p>
 ## Usage
 
 Simply visit our internet website ...?
