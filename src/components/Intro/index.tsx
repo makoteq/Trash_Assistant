@@ -39,7 +39,7 @@ const pages = [
     />,
     <IntroPage
         title="Zaczynamy"
-        content={<p>Na początek znajdź dowolony przedmiot, który nadaje się do wyrzucenia (np. plastikową butelkę po napoju) i spróbuj go zeskanować.</p>}
+        content={<p>Na początek znajdź dowolny przedmiot, który nadaje się do wyrzucenia (np. plastikową butelkę po napoju) i spróbuj go zeskanować.</p>}
     />,
 ];
 
