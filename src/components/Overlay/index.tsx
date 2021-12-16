@@ -42,8 +42,8 @@ export const Overlay: FC = () => {
                 onClick={async () => {
                     const can = getVideoFrame(document.querySelector("#video-feed") as HTMLVideoElement);
                     const modelResult = await model?.classify(can);
-                    const guess = modelResult?.[0].className.split(",")[0] ?? "";
-                    const result = database.find((e) => e.AIname.indexOf(guess) !== -1);
+                    const guesses = modelResult?.map((g) => g.className.split(",")).flat(2);
+                    const result = database.find((r) => guesses?.find((n) => r.AIname.indexOf(n) !== -1));
                     spawnDialog(
                         (c) => {
                             return (
